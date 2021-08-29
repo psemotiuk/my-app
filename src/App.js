@@ -1,23 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile from "./components/Profile";
+import {addUser} from "./redux/state";
 
-function App() {
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>my app</h1>
+      <Profile state={props.state} addUser={props.addUser} updateNewPostText={props.updateNewPostText} />
     </div>
   );
 }
